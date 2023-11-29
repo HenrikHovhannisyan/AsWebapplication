@@ -1,0 +1,28 @@
+@import "style.css";
+
+/* login */
+@import "login/login.css";
+
+/*header*/
+@import "layouts/header.css";
+
+/* manager dashboard */
+@import "manager-dashboard/manager-dashboard.css";
+
+/* manage workers */
+@import "manager-dashboard/manage-workers.css";
+
+/* bootstrap css */
+@import "plugins/bootstrap.min.css";
+
+/*newsletter modal*/
+@import "layouts/newsletterModal.css";
+
+/*worker modal*/
+@import "layouts/workerModal.css";
+
+/*corum vertage*/
+@import "worker-dashboard/corum-vertage.css";
+
+/*contract modal*/
+@import "layouts/contract-modal.css";

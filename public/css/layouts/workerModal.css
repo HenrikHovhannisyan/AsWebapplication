@@ -1,0 +1,92 @@
+@import "../fonts.css";
+
+.worker-modal .modal-lg {
+    max-width: 862px !important;
+}
+
+.newsletter-modal .modal-header, .worker-modal .modal-header,
+.contract-modal .modal-header {
+    margin: 30px 50px 20px 2rem !important;
+}
+
+.worker-modal .modal-header .title {
+    margin-bottom: 10px;
+}
+
+.worker-modal .modal-header .close, .contract-modal .modal-header .close,
+.delete-contract-modal .modal-header .close {
+    font-size: 2.5rem !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    line-height: 0.7 !important;
+}
+
+.worker-modal .modal-body {
+    padding: 0 2rem 2rem !important;
+}
+
+.worker-modal .body-content .left-side {
+    width: 70%;
+  }
+
+.worker-modal .body-content .left-side form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 28px;
+}
+
+.worker-modal .body-content .left-side .second-title {
+    font-size: 24px;
+    font-family: SourceSans3-SemiBold;
+    color: #045a8d;
+    margin-bottom: 25px;
+}
+
+.worker-modal .body-content .left-side .worker-form .form-item.w-small {
+    width: 100%;
+    max-width: 240px;
+}
+
+.worker-modal .body-content .left-side .worker-form .form-item.width-100 {
+    width: 100%;
+    max-width: 509px;
+}
+
+.worker-modal .body-content .left-side .worker-form .form-item label {
+    display: grid;
+    font-family: SourceSans3-SemiBold;
+    font-size: 14px;
+    color: #045a8d;
+    margin-bottom: 0 !important;
+}
+
+.worker-modal .body-content .left-side .worker-form .form-item input,
+.worker-modal .body-content .left-side .worker-form .form-item select {
+    width: 100%;
+    height: 42px;
+    border: 1px solid #c0c0c0;
+    color: #444444;
+    padding: 8px;
+    border-radius: 5px;
+}
+
+.worker-modal .body-content .left-side .worker-form .form-item input::placeholder {
+    color: #c0c0c0;
+}
+
+.worker-modal .body-content .left-side .worker-form .form-buttons {
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+
+.worker-modal .body-content .left-side .worker-form .form-buttons button {
+    width: 137px;
+    height: 42px;
+    text-align: center;
+    font-size: 18px;
+    font-family: SourceSans3-SemiBold;
+    border: none;
+    background-color: #045a8d;
+    color: #ffffff;
+    border-radius: 5px;
+}

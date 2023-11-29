@@ -1,0 +1,213 @@
+@import "../fonts.css";
+
+.dashboard-title {
+    display: flex;
+    gap: 50px;
+    align-items: center;
+    padding: 100px 0;
+}
+
+.dashboard-title .icon {
+    width: 78px;
+    height: 78px;
+}
+
+.dashboard-title h1 {
+    font-size: 48px;
+    color: #006e8c;
+    font-family: Montserrat-Bold;
+}
+
+.dashboard-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 150px;
+}
+
+.dashboard-content .workers-name-list {
+    width: 60%;
+}
+
+.dashboard-content .workers-items-list {
+    width: 100%;
+    height: 500px;
+    overflow-y: scroll;
+    border: 1px solid #023858;
+    display: grid;
+    margin-top: 30px;
+}
+
+.dashboard-content .workers-items-list::-webkit-scrollbar {
+    width: 37px;
+    border: 1px solid #000000;
+  }
+  .dashboard-content .workers-items-list::-webkit-scrollbar-thumb {
+    background-color: #008db1;
+    background-clip: padding-box;
+    border-radius: 15px;
+    border: 1px solid #000000;
+  }
+  .dashboard-content .workers-items-list::-webkit-scrollbar-track {
+    background-color: transparent;
+  }
+
+  /* Buttons */
+  .dashboard-content .workers-items-list::-webkit-scrollbar-button:single-button {
+    background-color: #008db1;
+    border-color: #000000;
+    display: block;
+    border-style: solid;
+    height: 30px;
+    width: 37px;
+  }
+  /* Up */
+  .dashboard-content .workers-items-list::-webkit-scrollbar-button:single-button:vertical:decrement {
+    height: 30px;
+    width: 37px;
+    background-position: center;
+    background-image: url("../../images/up-arrow.png");
+    background-size: 20px;
+    background-repeat: no-repeat;
+  }
+  .dashboard-content .workers-items-list::-webkit-scrollbar-button:single-button:vertical:decrement:hover {
+    background-image: url("../../images/up-arrow.png");
+  }
+  /* Down */
+  .dashboard-content .workers-items-list::-webkit-scrollbar-button:single-button:vertical:increment {
+    height: 30px;
+    width: 37px;
+    background-position: center;
+    background-image: url("../../images/down-arrow.png");
+    background-size: 20px;
+    background-repeat: no-repeat;
+  }
+  .dashboard-content .workers-items-list::-webkit-scrollbar-button:vertical:single-button:increment:hover {
+    background-image: url("../../images/down-arrow.png");
+  }
+
+.dashboard-content .workers-search-bar input {
+    background: url("../../images/search-icon.png") no-repeat left;
+    background-size: 20px;
+    max-width: 382px;
+    width: 100%;
+    height: 32px;
+    font-size: 24px;
+    padding: 0 30px;
+    border: 1px solid #232323;
+    border-radius: 20px;
+    color: #006e8c;
+    background-color: transparent;
+    background-position: 2%;
+}
+
+.dashboard-content .workers-search-bar input::placeholder {
+    color: #006e8c;
+}
+
+.dashboard-content .workers-name-list .workers-item {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #008db1;
+    padding-right: 30px;
+}
+
+.dashboard-content .workers-name-list .workers-item .worker-image img {
+    width: 100px;
+    height: 100px;
+}
+
+.dashboard-content .workers-name-list .workers-item .worker-name {
+    font-size: 20px;
+    color: #006e8c;
+    width: 100%;
+    max-width: 140px;
+    margin: 0 30px 0 15px;
+    font-family: Montserrat-Bold;
+}
+
+.dashboard-content .workers-name-list .workers-item .worker-level,
+.manage-workers-main .content .worker-details .worker-level {
+    width: 100%;
+    margin-right: 30px;
+    display: grid;
+    gap: 5px;
+}
+
+.dashboard-content .workers-name-list .workers-item .worker-level span,
+.manage-workers-main .content .worker-details .worker-level span {
+   font-size: 20px;
+   color: #006e8c;
+   font-family: Montserrat-Bold;
+   margin-bottom: 5px;
+}
+
+.dashboard-content .workers-name-list .workers-item .worker-level .progress-bar,
+.manage-workers-main .content .worker-details .worker-level .progress-bar {
+    width: 100%;
+    background-color: #90caf9;
+    height: 29px;
+    border-radius: 5px;
+}
+
+.dashboard-content .workers-name-list .workers-item .worker-level .progress-bar .color-fill,
+.manage-workers-main .content .worker-details .worker-level .progress-bar .color-fill {
+    width: 70%;
+    height: 100%;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    background-color: #2196f3;
+}
+
+.dashboard-content .workers-name-list .workers-item .administer-btn {
+    margin-left: auto;
+    width: 100%;
+    max-width: 158px;
+    height: 43px;
+    border: 4px solid #023858;
+    background: transparent;
+    font-size: 20px;
+    color: #045a8d;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: Montserrat-Bold;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dashboard-content .add-buttons {
+    width: 35%;
+    display: grid;
+    gap: 30px;
+}
+
+.dashboard-content .add-buttons button {
+    margin: 0 auto;
+    display: flex;
+    width: 387px;
+    height: 250px;
+    flex-direction: column;
+    align-items: center;
+    background-color: transparent;
+    border: 1px solid #023858;
+}
+
+.dashboard-content .add-buttons button span {
+    font-size: 30px;
+    color: #006e8c;
+    text-align: center;
+    word-break: break-word;
+    width: 75%;
+    margin-top: 10px;
+    font-family: Montserrat-Bold;
+}
+
+.dashboard-content .add-buttons button img {
+    width: 105px;
+    height: 105px;
+    margin: auto;
+}

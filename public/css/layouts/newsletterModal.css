@@ -1,0 +1,261 @@
+@import "../fonts.css";
+
+.newsletter-modal .modal-lg {
+    max-width: 1074px !important;
+}
+
+.newsletter-modal .modal-content, .worker-modal .modal-content,
+.contract-modal .modal-content, .delete-contract-modal .modal-content {
+    background-color: #c9f1fd !important;
+    border: 1px solid #d6d6d6  !important;
+    border-radius: 10px;
+}
+
+.newsletter-modal .modal-header, .worker-modal .modal-header,
+.contract-modal .modal-header, .delete-contract-modal .modal-header {
+    border: none !important;
+    margin: 20px 50px 20px !important;
+    padding: 0 !important;
+}
+
+.newsletter-modal .modal-header .close {
+    font-size: 2.5rem !important;
+}
+
+.newsletter-modal .modal-body {
+    padding: 2rem !important;
+}
+
+.newsletter-modal .body-content, .worker-modal .body-content {
+    display: flex;
+    align-items: center;
+}
+
+.newsletter-modal .body-content .left-side, .worker-modal .body-content .left-side,
+.contract-modal .body-content .left-side {
+    width: 65%;
+    border-right: 1px solid #C0DCE4;
+    padding-right: 15px;
+}
+
+.newsletter-modal .body-content .left-side .newsletter-form {
+    display: grid;
+    gap: 25px;
+}
+
+.newsletter-modal .body-content .left-side .newsletter-form .form-item,
+.worker-modal .body-content .left-side .worker-form .form-item {
+  display: grid;
+}
+
+.newsletter-modal .body-content .left-side .newsletter-form .form-item label {
+    display: grid;
+    font-family: SourceSans3-SemiBold;
+    font-size: 24px;
+    color: #444444;
+}
+
+.newsletter-modal .body-content .left-side .newsletter-form .form-item input {
+    background-color: #ffffff;
+    border: 2px solid #d6d6d6;
+    color: #444444;
+    max-width: 300px;
+    height: 55px;
+    padding: 8px;
+    font-size: 14px;
+    font-family: SourceSans3-Regular;
+}
+
+.newsletter-modal .body-content .left-side .newsletter-form .form-item textarea {
+    background-color: #ffffff;
+    border: 2px solid #d6d6d6;
+    color: #444444;
+    font-size: 14px;
+    width: 100%;
+    height: 252px;
+    padding: 8px;
+    font-family: SourceSans3-Regular;
+    resize: none;
+}
+
+.newsletter-modal .body-content .left-side .newsletter-form .form-item textarea::placeholder {
+    color: #c0c0c0;
+}
+
+.newsletter-modal .body-content .left-side .newsletter-form .form-buttons,
+.worker-modal .body-content .left-side .worker-form .form-buttons {
+    display: flex;
+    gap: 20px;
+    margin-top: 10px;
+}
+
+.newsletter-modal .body-content .left-side .newsletter-form .form-buttons button,
+.contract-modal .body-content .left-side .worker-form .form-buttons button {
+    width: 170px;
+    height: 55px;
+    text-align: center;
+    font-size: 18px;
+    font-family: SourceSans3-SemiBold;
+    border: none;
+    background-color: #045a8d;
+    color: #ffffff;
+    border-radius: 5px;
+}
+
+.newsletter-modal .body-content .left-side .newsletter-form .form-buttons button.cancel-btn,
+.worker-modal .body-content .left-side .worker-form .form-buttons button.cancel-btn,
+.contract-modal .body-content .left-side .worker-form .form-buttons button.cancel-btn {
+    background-color: #ebebeb;
+    color: #606060;
+}
+
+.newsletter-modal .body-content .left-side .title, .worker-modal .modal-header .title,
+.contract-modal .modal-header .title, .delete-contract-modal .modal-header .title {
+    font-size: 30px;
+    color: #045a8d;
+    font-family: SourceSans3-Bold;
+    margin-bottom: 25px;
+}
+
+.newsletter-modal .right-side {
+    margin: 0 auto;
+    height: 310px;
+    max-width: 35%;
+    overflow-y: scroll;
+    border: 1px solid #023858;
+}
+
+.newsletter-modal .right-side .modal-workers-item {
+    display: flex;
+    align-items: center;
+    height: 61px;
+    border-bottom: 1px solid #008db1;
+}
+
+.newsletter-modal .right-side .modal-workers-item .image img {
+    width: 61px;
+    height: 61px;
+}
+
+.newsletter-modal .right-side .modal-workers-item .name {
+    width: 100%;
+    font-size: 20px;
+    font-family:  Montserrat-Bold;
+    color: #006e8c;
+    margin-left: 15px;
+}
+  
+.newsletter-modal .right-side .container {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    margin-left: auto;
+    width: 40px;
+    height: 40px;
+  }
+  
+  /* Hide the browser's default checkbox */
+  .newsletter-modal .right-side .container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+  
+  /* Create a custom checkbox */
+  .newsletter-modal .right-side .checkmark {
+    position: absolute;
+    top: 0;
+    right: 12%;
+    bottom: 0;
+    height: 25px;
+    width: 25px;
+    background-color: transparent;
+    margin: auto;
+    border-radius: 50%;
+    border: 2px solid #2196f3;
+  }
+  
+  /* When the checkbox is checked, add a blue background */
+  .newsletter-modal .right-side .container input:checked ~ .checkmark {
+    background-color: #2196f3;
+  }
+  
+  /* Create the checkmark/indicator (hidden when not checked) */
+  .newsletter-modal .right-side .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  
+  /* Show the checkmark when checked */
+  .newsletter-modal .right-side .container input:checked ~ .checkmark:after {
+    display: block;
+  }
+  
+  /* Style the checkmark/indicator */
+  .newsletter-modal .right-side .container .checkmark:after {
+    left: 7px;
+    top: 0;
+    width: 7px;
+    height: 16px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+
+  .newsletter-modal .right-side::-webkit-scrollbar {
+    width: 23px;
+    border: 1px solid #000000;
+  }
+  .newsletter-modal .right-side::-webkit-scrollbar-thumb {
+    background-color: #0570b0;
+    background-clip: padding-box;
+    border-radius: 15px;
+    border: 1px solid #000000;
+  }
+  .newsletter-modal .right-side::-webkit-scrollbar-track {
+    background-color: transparent;
+  }
+
+  /* Buttons */
+  .newsletter-modal .right-side::-webkit-scrollbar-button:single-button {
+    background-color: #0570b0;
+    border-color: #000000;
+    display: block;
+    border-style: solid;
+    height: 30px;
+    width: 37px;
+  }
+  /* Up */
+  .newsletter-modal .right-side::-webkit-scrollbar-button:single-button:vertical:decrement {
+    height: 30px;
+    width: 37px;
+    background-position: center;
+    background-image: url("../../images/up-arrow.png");
+    background-size: 20px;
+    background-repeat: no-repeat;
+  }
+  .newsletter-modal .right-side::-webkit-scrollbar-button:single-button:vertical:decrement:hover {
+    background-image: url("../../images/up-arrow.png");
+  }
+  /* Down */
+  .newsletter-modal .right-side::-webkit-scrollbar-button:single-button:vertical:increment {
+    height: 30px;
+    width: 37px;
+    background-position: center;
+    background-image: url("../../images/down-arrow.png");
+    background-size: 20px;
+    background-repeat: no-repeat;
+  }
+  .newsletter-modal .right-side::-webkit-scrollbar-button:vertical:single-button:increment:hover {
+    background-image: url("../../images/down-arrow.png");
+  }

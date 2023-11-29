@@ -1,0 +1,55 @@
+@import "../fonts.css";
+
+.contract-modal .modal-lg, .delete-contract-modal .modal-lg {
+    max-width: 947px !important;
+}
+
+.contract-modal .body-content .left-side {
+    margin-bottom: 30px;
+}
+
+.contract-modal .body-content .left-side form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 56px;
+    padding-left: 15px;
+}
+
+.contract-modal .body-content .left-side .worker-form .form-item {
+    display: grid;
+    width: 45%;
+  }
+
+  .contract-modal .body-content .left-side .worker-form .form-item label {
+    color: #444444;
+    font-size: 20px;
+    font-family: SourceSans3-SemiBold;
+  }
+
+.contract-modal .body-content .left-side form .form-item input {
+    width: 100%;
+    max-width: 218px;
+    height: 49px;
+    border: 1px solid #c0c0c0;
+    background-color: #ffffff;
+    color: #444444;
+    padding: 8px;
+    border-radius: 5px;
+    font-family: SourceSans3-Regular;
+}
+
+.contract-modal .body-content .left-side form .form-item input::placeholder {
+    color: #c0c0c0;
+}
+
+.contract-modal .body-content .left-side form .form-item input.rewards {
+    width: 100%;
+    max-width: 264px;
+}
+
+.contract-modal .body-content .left-side .worker-form .form-buttons {
+    width: 100%;
+    margin-top: 60px;
+    display: flex;
+    gap: 20px;
+}

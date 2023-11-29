@@ -1,0 +1,192 @@
+@import "../fonts.css";
+
+.manage-workers-main .dashboard-title, .corum-contracts-main .dashboard-title {
+    padding: 30px 0;
+}
+
+.manage-workers-main .dashboard-title .back-btn, .corum-contracts-main .dashboard-title .back-btn {
+    margin-left: auto;
+    display: grid;
+    text-align: center;
+}
+
+.manage-workers-main .dashboard-title h1 {
+    max-width: 880px;
+    width: 100%;
+}
+
+.manage-workers-main .dashboard-title .back-btn img,
+.corum-contracts-main .dashboard-title .back-btn img {
+    width: 115px;
+    height: 115px;
+}
+
+.manage-workers-main .dashboard-title .back-btn span,
+.corum-contracts-main .dashboard-title .back-btn span {
+    font-size: 30px;
+    color: #006e8c;
+    font-family: Montserrat-Bold;
+}
+
+.manage-workers-main .content {
+    display: grid;
+    gap: 30px;
+}
+
+.manage-workers-main .content .worker-details {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    max-width: 764px;
+    border: 1px solid #023858;
+    margin-left: 260px;
+}
+
+.manage-workers-main .content .worker-details .worker-image img {
+    height: 100px;
+    width: 100px;
+}
+
+.manage-workers-main .content .worker-details .worker-name {
+    margin: 0 15px;
+    width: 100%;
+    max-width: 140px;
+    font-size: 20px;
+    color: #006e8c;
+    font-family: Montserrat-Bold;
+}
+
+.manage-workers-main .content .worker-details .worker-level .progress-bar {
+    max-width: 260px;
+}
+
+.manage-workers-main .content .worker-estimate {
+    padding-left: 260px;
+}
+
+.manage-workers-main .content .worker-estimate form {
+    display: flex;
+    gap: 50px;
+}
+
+.manage-workers-main .content .worker-estimate .input-fields {
+    display: grid;
+    grid-template-columns: 198px 198px auto;
+    width: 100%;
+    max-width: 635px;
+    align-items: center;
+    gap: 20px 30px;
+}
+
+.manage-workers-main .content .worker-estimate .input-fields .form-item {
+    display: grid;
+}
+
+.manage-workers-main .content .worker-estimate .input-fields .form-item.item-3 {
+    grid-row-start: 2;
+    grid-row-end: 2;
+}
+
+.manage-workers-main .content .worker-estimate .input-fields .form-item.item-4 {
+    grid-row-start: 2;
+    grid-row-end: 3;
+}
+
+.manage-workers-main .content .worker-estimate .input-fields .form-item label,
+.manage-workers-main .content .worker-estimate .deduct-points label {
+    font-size: 30px;
+    color: #006e8c;
+    font-family: Montserrat-Bold;
+}
+
+.manage-workers-main .content .worker-estimate .input-fields .form-item input,
+.manage-workers-main .content .worker-estimate .deduct-points input {
+    width: 198px;
+    height: 42px;
+    border: 1px solid #232323;
+    color: #232323;
+    border-radius: 5px;
+    padding: 8px;
+}
+
+.manage-workers-main .content .worker-estimate .input-fields .form-item input {
+    width: 198px;
+    height: 42px;
+    border: 1px solid #232323;
+    color: #232323;
+    border-radius: 5px;
+    padding: 8px;
+}
+
+.manage-workers-main .content .worker-estimate .input-fields .calculate-btn {
+    grid-row-start: 3;
+    grid-row-end: 1;
+    width: 142px;
+    height: 46px;
+    background-color: #008db1;
+    border: 1px solid #232323;
+    font-size: 24px;
+    font-family: Helvetica;
+    color: #ffffff;
+    border-radius: 5px;
+}
+
+.manage-workers-main .content .worker-estimate .deduct-points {
+    display: grid;
+    gap: 15px;
+    max-width: 278px;
+    width: 100%;
+}
+
+.manage-workers-main .content .worker-estimate .deduct-points button {
+    width: 142px;
+    height: 46px;
+    background-color: #008db1;
+    border: 1px solid #232323;
+    font-size: 24px;
+    font-family: Helvetica;
+    color: #ffffff;
+    border-radius: 5px;
+}
+
+.manage-workers-main .content .worker-estimate .overwrite-points-btn {
+    width: 100%;
+    max-width: 436px;
+    font-size: 24px;
+    color: #ffffff;
+    border: 1px solid #232323;
+    background-color: #008db1;
+    border-radius: 5px;
+    margin: 50px 0;
+}
+
+.results-table table {
+    width: 100%;
+    max-width: 958px;
+    margin: auto;
+    text-align: center;
+    border: 2px solid;
+    color: #000000;
+    font-size: 20px;
+    font-family: Helvetica;
+    font-weight: 600;
+    margin-bottom: 100px;
+}
+
+.results-table th {
+    border: 2px solid #000000;
+    background-color: #008db1;
+    color: #ffffff;
+    height: 70px;
+}
+
+.results-table th:nth-child(1), .results-table th:nth-child(2) {
+    border: 2px solid #000000;
+    background-color: #008db1;
+    max-width: 70px;
+}
+
+.results-table td {
+    border: 2px solid;
+}

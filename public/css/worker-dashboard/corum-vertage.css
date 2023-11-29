@@ -1,0 +1,87 @@
+@import "../fonts.css";
+
+.corum-contracts-main .dashboard-title img {
+    width: 230px;
+    height: 238px;
+}
+
+.corum-contracts-main .dashboard-content {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    margin: 150px 0;
+}
+
+.corum-contracts-main .dashboard-content .left-side {
+    width: 100%;
+    max-width: 900px;
+}
+
+.corum-contracts-main .dashboard-content .left-side .sum-list {
+    display: grid;
+    gap: 35px;
+}
+
+.corum-contracts-main .dashboard-content .left-side .sum-list .sum-item {
+    border: 4px solid #023858;
+    height: 87px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    font-size: 30px;
+    color: #023858;
+    font-family: Helvetica;
+    font-weight: 600;
+}
+
+.corum-contracts-main .dashboard-content .left-side .sum-list .sum-item .name {
+    width: 100%;
+    height: 100%;
+    max-width: 78%;
+    padding: 8px;
+    border-right: 4px solid #023858;
+    display: flex;
+    align-items: center;
+}
+
+.corum-contracts-main .dashboard-content .left-side .sum-list .sum-item .number {
+    width: 100%;
+    height: 100%;
+    max-width: 23%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.corum-contracts-main .dashboard-content .left-side .sum-list .sum-item .number.custom {
+    max-width: 13%;
+}
+
+.corum-contracts-main .dashboard-content .right-side {
+    width: 100%;
+    max-width: 271px;
+    display: grid;
+    gap: 35px;
+}
+
+.corum-contracts-main .dashboard-content .right-side button {
+    width: 100%;
+    max-width: 271px;
+    height: 266px;
+    border: 1px solid #232323;
+    text-align: center;
+    background-color: transparent;
+    border-radius: 5px;
+}
+
+.corum-contracts-main .dashboard-content .right-side button img {
+    width: 170px;
+    height: 170px;
+}
+
+.corum-contracts-main .dashboard-content .right-side button span {
+   font-size: 30px;
+   color: #006e8c;
+   font-family: Helvetica;
+    font-weight: 600;
+}
