@@ -7,7 +7,7 @@
     <main>
         <div class="main-container">
             <div class="dashboard-title">
-                <img src="images/Admin_Dashboard_Contacts_Icon_1.png" class="icon" alt="contact icon">
+                <img src="{{ asset('images/Admin_Dashboard_Contacts_Icon_1.png') }}" class="icon" alt="contact icon">
                 <h1>Geschäftsführer</h1>
             </div>
             <div class="dashboard-content">
@@ -21,7 +21,7 @@
                         @foreach($data as $user)
                             <div class="workers-item">
                                 <div class="worker-image">
-                                    <img src="images/Admin_Dashboard_Avatar_1.png" alt="worker image">
+                                    <img src="{{ asset('images/Admin_Dashboard_Avatar_1.png') }}" alt="worker image">
                                 </div>
                                 <div class="worker-name">{{ $user->name }}</div>
                                 <div class="worker-level">
@@ -29,10 +29,10 @@
                                     Stufe {{ $user->verwalten->stufe }} ; {{ $user->verwalten->punkte }} Punkte
                                 </span>
                                     <div class="progress-bar">
-                                        <div class="color-fill" style="width: {{ $user->verwalten->stufe }}%"></div>
+                                        <div class="color-fill" style="width: {{ $user->verwalten->stufe * 12.5 }}%"></div>
                                     </div>
                                 </div>
-                                <a href="manage-workers.html" class="administer-btn">Verwalten</a>
+                                <a href="{{ route('verwalten.edit',$user->id) }}" class="administer-btn">Verwalten</a>
                             </div>
                         @endforeach
                     </div>
@@ -40,12 +40,12 @@
                 <div class="add-buttons">
                     <button data-toggle="modal" data-target=".newsletter-modal">
                         <span>Newsletter hinzufügen</span>
-                        <img src="images/Admin_Dashboard_Add_Alert_Icon_1.png" alt="add newsletter alert">
+                        <img src="{{ asset('images/Admin_Dashboard_Add_Alert_Icon_1.png') }}" alt="add newsletter alert">
                     </button>
 
                     <button data-toggle="modal" data-target=".worker-modal">
                         <span>Geschäftspartner hinzufügen</span>
-                        <img src="images/Admin_Dashboard_Person_Add_Icon_1.png" alt="add manager">
+                        <img src="{{ asset('images/Admin_Dashboard_Person_Add_Icon_1.png') }}" alt="add manager">
                     </button>
                 </div>
             </div>

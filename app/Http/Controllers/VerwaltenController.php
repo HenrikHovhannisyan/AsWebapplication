@@ -3,6 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Models\verwalten;
+use Illuminate\Contracts\View\Factory;
+use Illuminate\Contracts\View\View;
+use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 
@@ -54,11 +57,11 @@ class VerwaltenController extends Controller
      * Show the form for editing the specified resource.
      *
      * @param verwalten $verwalten
-     * @return void
+     * @return Factory|View
      */
     public function edit(verwalten $verwalten)
     {
-        //
+        return view('admin.verwalten',compact('verwalten'));
     }
 
     /**
@@ -66,11 +69,17 @@ class VerwaltenController extends Controller
      *
      * @param Request $request
      * @param verwalten $verwalten
-     * @return void
+     * @return RedirectResponse
      */
     public function update(Request $request, verwalten $verwalten)
     {
-        //
+        dd((($request->kaufanbot * $request->percent) / 30) / 100);
+        $verwalten->update([
+            'stufe' => $request->stufe,
+            'punkte' => $request->punkte,
+        ]);
+
+        return redirect()->back();
     }
 
     /**
