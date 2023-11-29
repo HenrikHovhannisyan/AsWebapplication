@@ -18,110 +18,23 @@
                         </form>
                     </div>
                     <div class="workers-items-list">
-                        <div class="workers-item">
-                            <div class="worker-image"><img src="images/Admin_Dashboard_Avatar_1.png" alt="worker image"></div>
-                            <div class="worker-name">Max Mustermann</div>
-                            <div class="worker-level">
-                                <span>
-                                    Stufe 2 ; 1.125 Punkte
-                                </span>
-                                <div class="progress-bar">
-                                    <div class="color-fill"></div>
+                        @foreach($data as $user)
+                            <div class="workers-item">
+                                <div class="worker-image">
+                                    <img src="images/Admin_Dashboard_Avatar_1.png" alt="worker image">
                                 </div>
-                            </div>
-                            <a href="manage-workers.html" class="administer-btn">Verwalten</a>
-                        </div>
-                        <div class="workers-item">
-                            <div class="worker-image"><img src="images/Admin_Dashboard_Avatar_1.png" alt="worker image"></div>
-                            <div class="worker-name">Max Mustermann</div>
-                            <div class="worker-level">
+                                <div class="worker-name">{{ $user->name }}</div>
+                                <div class="worker-level">
                                 <span>
-                                    Stufe 2 ; 1.125 Punkte
+                                    Stufe {{ $user->verwalten->stufe }} ; {{ $user->verwalten->punkte }} Punkte
                                 </span>
-                                <div class="progress-bar">
-                                    <div class="color-fill"></div>
+                                    <div class="progress-bar">
+                                        <div class="color-fill" style="width: {{ $user->verwalten->stufe }}%"></div>
+                                    </div>
                                 </div>
+                                <a href="manage-workers.html" class="administer-btn">Verwalten</a>
                             </div>
-                            <a href="manage-workers.html" class="administer-btn">Verwalten</a>
-                        </div>
-                        <div class="workers-item">
-                            <div class="worker-image"><img src="images/Admin_Dashboard_Avatar_1.png" alt="worker image"></div>
-                            <div class="worker-name">Max Mustermann</div>
-                            <div class="worker-level">
-                                <span>
-                                    Stufe 2 ; 1.125 Punkte
-                                </span>
-                                <div class="progress-bar">
-                                    <div class="color-fill"></div>
-                                </div>
-                            </div>
-                            <a href="manage-workers.html" class="administer-btn">Verwalten</a>
-                        </div>
-                        <div class="workers-item">
-                            <div class="worker-image"><img src="images/Admin_Dashboard_Avatar_1.png" alt="worker image"></div>
-                            <div class="worker-name">Max Mustermann</div>
-                            <div class="worker-level">
-                                <span>
-                                    Stufe 2 ; 1.125 Punkte
-                                </span>
-                                <div class="progress-bar">
-                                    <div class="color-fill"></div>
-                                </div>
-                            </div>
-                            <a href="manage-workers.html" class="administer-btn">Verwalten</a>
-                        </div>
-                        <div class="workers-item">
-                            <div class="worker-image"><img src="images/Admin_Dashboard_Avatar_1.png" alt="worker image"></div>
-                            <div class="worker-name">Max Mustermann</div>
-                            <div class="worker-level">
-                                <span>
-                                    Stufe 2 ; 1.125 Punkte
-                                </span>
-                                <div class="progress-bar">
-                                    <div class="color-fill"></div>
-                                </div>
-                            </div>
-                            <a href="manage-workers.html" class="administer-btn">Verwalten</a>
-                        </div>
-                        <div class="workers-item">
-                            <div class="worker-image"><img src="images/Admin_Dashboard_Avatar_1.png" alt="worker image"></div>
-                            <div class="worker-name">Max Mustermann</div>
-                            <div class="worker-level">
-                                <span>
-                                    Stufe 2 ; 1.125 Punkte
-                                </span>
-                                <div class="progress-bar">
-                                    <div class="color-fill"></div>
-                                </div>
-                            </div>
-                            <a href="manage-workers.html" class="administer-btn">Verwalten</a>
-                        </div>
-                        <div class="workers-item">
-                            <div class="worker-image"><img src="images/Admin_Dashboard_Avatar_1.png" alt="worker image"></div>
-                            <div class="worker-name">Max Mustermann</div>
-                            <div class="worker-level">
-                                <span>
-                                    Stufe 2 ; 1.125 Punkte
-                                </span>
-                                <div class="progress-bar">
-                                    <div class="color-fill"></div>
-                                </div>
-                            </div>
-                            <a href="manage-workers.html" class="administer-btn">Verwalten</a>
-                        </div>
-                        <div class="workers-item">
-                            <div class="worker-image"><img src="images/Admin_Dashboard_Avatar_1.png" alt="worker image"></div>
-                            <div class="worker-name">Max Mustermann</div>
-                            <div class="worker-level">
-                                <span>
-                                    Stufe 2 ; 1.125 Punkte
-                                </span>
-                                <div class="progress-bar">
-                                    <div class="color-fill"></div>
-                                </div>
-                            </div>
-                            <a href="manage-workers.html" class="administer-btn">Verwalten</a>
-                        </div>
+                        @endforeach
                     </div>
                 </div>
                 <div class="add-buttons">
@@ -141,7 +54,8 @@
 
 
     <!-- add newsletter modal -->
-    <div class="newsletter-modal modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    <div class="newsletter-modal modal fade bd-example-modal-lg" tabindex="-1" role="dialog"
+         aria-labelledby="myLargeModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-lg modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-header">
@@ -233,7 +147,8 @@
     </div>
 
     <!-- add worker modal -->
-    <div class="worker-modal modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    <div class="worker-modal modal fade bd-example-modal-lg" tabindex="-1" role="dialog"
+         aria-labelledby="myLargeModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-lg modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-header">

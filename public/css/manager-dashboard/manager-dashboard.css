@@ -154,7 +154,6 @@
 
 .dashboard-content .workers-name-list .workers-item .worker-level .progress-bar .color-fill,
 .manage-workers-main .content .worker-details .worker-level .progress-bar .color-fill {
-    width: 70%;
     height: 100%;
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
