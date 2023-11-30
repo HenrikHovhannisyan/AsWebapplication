@@ -61,7 +61,9 @@ class VerwaltenController extends Controller
      */
     public function edit(verwalten $verwalten)
     {
-        return view('admin.verwalten',compact('verwalten'));
+        $punkte_procent = ($verwalten->punkte / 50000) * 100;
+
+        return view('admin.verwalten', compact('verwalten', 'punkte_procent'));
     }
 
     /**
@@ -71,13 +73,56 @@ class VerwaltenController extends Controller
      * @param verwalten $verwalten
      * @return RedirectResponse
      */
-    public function update(Request $request, verwalten $verwalten)
+    public function update(Request $request, Verwalten $verwalten)
     {
-        dd((($request->kaufanbot * $request->percent) / 30) / 100);
-        $verwalten->update([
-            'stufe' => $request->stufe,
-            'punkte' => $request->punkte,
+        $request->validate([
+            'punkte' => 'required|numeric',
+            'stufe' => 'required|numeric',
         ]);
+
+        $punkte = $verwalten->punkte + $request->punkte;
+
+        if ($punkte <= 100) {
+            $verwalten->update([
+                'stufe' => 1,
+                'punkte' => $punkte,
+            ]);
+        } elseif ($punkte < 750) {
+            $verwalten->update([
+                'stufe' => 2,
+                'punkte' => $punkte,
+            ]);
+        } elseif ($punkte < 2500) {
+            $verwalten->update([
+                'stufe' => 3,
+                'punkte' => $punkte,
+            ]);
+        } elseif ($punkte < 6500) {
+            $verwalten->update([
+                'stufe' => 4,
+                'punkte' => $punkte,
+            ]);
+        } elseif ($punkte < 15000) {
+            $verwalten->update([
+                'stufe' => 5,
+                'punkte' => $punkte,
+            ]);
+        } elseif ($punkte < 30000) {
+            $verwalten->update([
+                'stufe' => 6,
+                'punkte' => $punkte,
+            ]);
+        } elseif ($punkte < 50000) {
+            $verwalten->update([
+                'stufe' => 7,
+                'punkte' => $punkte,
+            ]);
+        } else {
+            $verwalten->update([
+                'stufe' => 8,
+                'punkte' => $punkte,
+            ]);
+        }
 
         return redirect()->back();
     }

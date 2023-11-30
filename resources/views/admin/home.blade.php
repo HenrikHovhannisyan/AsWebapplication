@@ -29,7 +29,7 @@
                                     Stufe {{ $user->verwalten->stufe }} ; {{ $user->verwalten->punkte }} Punkte
                                 </span>
                                     <div class="progress-bar">
-                                        <div class="color-fill" style="width: {{ $user->verwalten->stufe * 12.5 }}%"></div>
+                                        <div class="color-fill" style="width: {{ $user->punkte_procent }}%"></div>
                                     </div>
                                 </div>
                                 <a href="{{ route('verwalten.edit',$user->id) }}" class="administer-btn">Verwalten</a>

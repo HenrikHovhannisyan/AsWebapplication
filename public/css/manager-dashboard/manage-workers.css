@@ -62,11 +62,12 @@
 }
 
 .manage-workers-main .content .worker-estimate {
+    display: flex;
     padding-left: 260px;
 }
 
 .manage-workers-main .content .worker-estimate form {
-    display: flex;
+    display: grid;
     gap: 50px;
 }
 
@@ -134,7 +135,9 @@
 
 .manage-workers-main .content .worker-estimate .deduct-points {
     display: grid;
+    align-content: start;
     gap: 15px;
+    margin-left: 50px;
     max-width: 278px;
     width: 100%;
 }
@@ -158,7 +161,7 @@
     border: 1px solid #232323;
     background-color: #008db1;
     border-radius: 5px;
-    margin: 50px 0;
+    margin-bottom: 50px;
 }
 
 .results-table table {

@@ -29,7 +29,9 @@ class AdminController extends Controller
         $verwaltens = verwalten::whereIn('user_id', $users->pluck('id'))->get();
         $data = $users->map(function ($user) use ($verwaltens) {
             $verwalten = $verwaltens->where('user_id', $user->id)->first();
+            $punkte_procent = ($verwalten->punkte / 50000) * 100;
             $user->verwalten = $verwalten;
+            $user->punkte_procent = $punkte_procent;
             return $user;
         });
 

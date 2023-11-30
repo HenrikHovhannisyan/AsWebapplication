@@ -21,7 +21,7 @@
                             Stufe {{ $verwalten->stufe }} ; {{ $verwalten->punkte }} Punkte
                         </span>
                         <div class="progress-bar">
-                            <div class="color-fill" style="width: {{ $verwalten->stufe * 12.5 }}%"></div>
+                            <div class="color-fill" style="width: {{ $punkte_procent }}%"></div>
                         </div>
                     </div>
                 </div>
@@ -36,7 +36,7 @@
                             </div>
                             <div class="form-item">
                                 <label for="punkte">Punkte:</label>
-                                <input type="number" min="0" id="punkte" name="punkte" placeholder="..." disabled>
+                                <input type="number" min="0" id="punkte" name="punkte" placeholder="...">
                             </div>
                             <div class="form-item item-3">
                                 <label for="kaufanbot">Kaufanbot:</label>
@@ -44,19 +44,20 @@
                             </div>
                             <div class="form-item item-4">
                                 <label for="stufe">Stufe:</label>
-                                <input type="text" id="stufe" name="stufe" placeholder="..." disabled>
+                                <input type="text" id="stufe" name="stufe" placeholder="...">
                             </div>
                             <button type="button" class="calculate-btn" id="btn_calc">Rechnen</button>
                         </div>
-                        <div class="deduct-points">
-                            <label for="deductPoints">Punkte abziehen:</label>
-                            <input type="number" min="0" id="deductPoints">
-                            <button>Abziehen</button>
-                        </div>
+                        <button class="overwrite-points-btn">
+                            Die Punkte & STUFE überschreiben
+                        </button>
                     </form>
-                    <button class="overwrite-points-btn">
-                        Die Punkte & STUFE überschreiben
-                    </button>
+
+                    <div class="deduct-points">
+                        <label for="deductPoints">Punkte abziehen:</label>
+                        <input type="number" min="0" id="deductPoints">
+                        <button>Abziehen</button>
+                    </div>
                 </div>
                 <div class="results-table">
                     <table>
