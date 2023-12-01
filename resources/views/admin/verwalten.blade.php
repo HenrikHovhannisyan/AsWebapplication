@@ -14,7 +14,8 @@
             </div>
             <div class="content">
                 <div class="worker-details">
-                    <div class="worker-image"><img src="{{ asset('images/Admin_Dashboard_Avatar_1.png') }}" alt="worker image"></div>
+                    <div class="worker-image"><img src="{{ asset('images/Admin_Dashboard_Avatar_1.png') }}"
+                                                   alt="worker image"></div>
                     <div class="worker-name">Max Mustermann</div>
                     <div class="worker-level">
                         <span>
@@ -32,7 +33,8 @@
                         <div class="input-fields">
                             <div class="form-item">
                                 <label for="provision">Provision:</label>
-                                <input type="number" min="3" max="6" value="3" id="provision" name="percent" placeholder="3-6%" required>
+                                <input type="number" min="3" max="6" value="3" id="provision" name="percent"
+                                       placeholder="3-6%" required>
                             </div>
                             <div class="form-item">
                                 <label for="punkte">Punkte:</label>
@@ -40,7 +42,8 @@
                             </div>
                             <div class="form-item item-3">
                                 <label for="kaufanbot">Kaufanbot:</label>
-                                <input type="number" min="0" id="kaufanbot" name="kaufanbot" placeholder="400.000" required>
+                                <input type="number" min="0" id="kaufanbot" name="kaufanbot" placeholder="400.000"
+                                       required>
                             </div>
                             <div class="form-item item-4">
                                 <label for="stufe">Stufe:</label>
@@ -54,9 +57,12 @@
                     </form>
 
                     <div class="deduct-points">
-                        <label for="deductPoints">Punkte abziehen:</label>
-                        <input type="number" min="0" id="deductPoints">
-                        <button>Abziehen</button>
+                        <form action="{{ route('verwalten.abziehen',$verwalten->id) }}" method="POST">
+                            @csrf
+                            <label for="deductPoints">Punkte abziehen:</label>
+                            <input type="number" name="abziehen_value" min="0" id="deductPoints">
+                            <button>Abziehen</button>
+                        </form>
                     </div>
                 </div>
                 <div class="results-table">

@@ -11,6 +11,24 @@ use Illuminate\Http\Response;
 
 class VerwaltenController extends Controller
 {
+    private function updatePoints(Verwalten $verwalten, $points)
+    {
+        $stufe = 1;
+        $thresholds = [100, 750, 2500, 6500, 15000, 30000, 50000];
+
+        foreach ($thresholds as $index => $threshold) {
+            if ($points < $threshold) {
+                $stufe = $index + 1;
+                break;
+            }
+        }
+
+        $verwalten->update([
+            'stufe' => $stufe,
+            'punkte' => $points,
+        ]);
+    }
+
     /**
      * Display a listing of the resource.
      *
@@ -80,49 +98,25 @@ class VerwaltenController extends Controller
             'stufe' => 'required|numeric',
         ]);
 
-        $punkte = $verwalten->punkte + $request->punkte;
+        $points = $verwalten->punkte + $request->punkte;
+        $this->updatePoints($verwalten, $points);
 
-        if ($punkte <= 100) {
-            $verwalten->update([
-                'stufe' => 1,
-                'punkte' => $punkte,
-            ]);
-        } elseif ($punkte < 750) {
-            $verwalten->update([
-                'stufe' => 2,
-                'punkte' => $punkte,
-            ]);
-        } elseif ($punkte < 2500) {
-            $verwalten->update([
-                'stufe' => 3,
-                'punkte' => $punkte,
-            ]);
-        } elseif ($punkte < 6500) {
-            $verwalten->update([
-                'stufe' => 4,
-                'punkte' => $punkte,
-            ]);
-        } elseif ($punkte < 15000) {
-            $verwalten->update([
-                'stufe' => 5,
-                'punkte' => $punkte,
-            ]);
-        } elseif ($punkte < 30000) {
-            $verwalten->update([
-                'stufe' => 6,
-                'punkte' => $punkte,
-            ]);
-        } elseif ($punkte < 50000) {
-            $verwalten->update([
-                'stufe' => 7,
-                'punkte' => $punkte,
-            ]);
-        } else {
-            $verwalten->update([
-                'stufe' => 8,
-                'punkte' => $punkte,
-            ]);
-        }
+        return redirect()->back();
+    }
+
+    /**
+     * @param Request $request
+     * @param verwalten $verwalten
+     * @return RedirectResponse
+     */
+    public function abziehen(Request $request, Verwalten $verwalten)
+    {
+        $request->validate([
+            'abziehen_value' => 'required|numeric',
+        ]);
+
+        $points = $verwalten->punkte - $request->abziehen_value;
+        $this->updatePoints($verwalten, $points);
 
         return redirect()->back();
     }

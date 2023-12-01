@@ -22,6 +22,7 @@ Route::middleware(['auth', 'is_admin'])->prefix('admin')->group(function () {
     Route::get('/', [AdminController::class, 'home'])->name('admin.home');
     Route::resource('users', UserController::class);
     Route::resource('verwalten', VerwaltenController::class);
+    Route::post('verwalten/{verwalten}/abziehen', [VerwaltenController::class, 'abziehen'])->name('verwalten.abziehen');
 });
 
 Auth::routes();
